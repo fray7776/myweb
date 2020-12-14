@@ -13,8 +13,9 @@
     String sex = request.getParameter("sex");
     String email = request.getParameter("email");
     String agree = request.getParameter("agree");
-    String phone = request.getParameter("firstnumber");
-    String phone1 = request.getParameter("lastnumber");
+    String phone = request.getParameter("phone");
+    String phone1 = request.getParameter("firstnumber");
+    String phone2 = request.getParameter("lastnumber");
     String job = request.getParameter("job");
     String hobby = request.getParameter("hobby");
     String information = request.getParameter("if");
@@ -24,7 +25,7 @@
     <h1>성별: <%=sex%></h1>
     <h1>메일: <%=email%></h1>
     <h1>동의여부:<%=agree%></h1>
-    <h1>폰번호:<%=phone+phone1%></h1>
+    <h1>폰번호:<%=phone%>-<%=phone1%>-<%phone2%></h1>
     <h1>직업: <%=job%></h1>
     <h1>취미: <%=hobby%></h1>
     <h1>자기소개: <%=information%></h1>
