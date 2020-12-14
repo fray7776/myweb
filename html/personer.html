@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal information</title>
+</head>
+
+<body>
+    <form action="personer.jsp" method="POST">
+    <h2>개인 정보 입력</h2>
+    아 이 디: <input type="text" name="id" size="10" required>
+    <button type="button" onclick="alert('ID중복검사 사용')">ID중복검사 사용</button></p>
+    생년월일: <input type="date" name="birthdate"></p>
+    성 별: <input type="radio" name="sex" value="male">남자
+    <input type="radio" name="sex" value="female">여자</p>
+    E-mail: <input type="email" name="email"></p>
+    메일수신: <input type="radio" name="agree" value="agree">수신동의
+    <input type="radio" name="agree" value="disagree">수신거부</p>
+    핸드폰: <select name="phone">
+        <option value="010" selected>010</option>
+        <option value="011">011</option>
+        <option value="016">016</option> -
+        <input type="text" name="firstnumber"> - <input type="text" name="lastnumber"></p>
+        직업: <select name="job">
+            <option value="학생" selected>학생</option>
+            <option value="직장인">직장인</option>
+            <option value="무직">무직</option>
+        </select></p>
+        취미: <input type="radio" name="hobby" value="쇼핑">쇼핑
+        <input type="radio" name="hobby" value="인터넷">인터넷
+        <input type="radio" name="hobby" value="음악감상">음악감상
+        <input type="radio" name="hobby" value="독서">독서
+        <input type="radio" name="hobby" value="스포츠">스포츠</p>
+        자기 소개: <textarea cols="50" rows="10" spellcheck="true" name="if"></textarea>
+
+    </p>
+
+        <input type="submit" value="등록">
+        <input type="reset" value="초기화">
+
+    </form>
+</body>
+
+</html>
