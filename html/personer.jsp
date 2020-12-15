@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="java.util.*"%>
+<%
+ 
+    request.setCharacterEncoding("UTF-8");
+ 
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,16 +26,19 @@
     String hobby = request.getParameter("hobby");
     String information = request.getParameter("if");
     %>
-    <h1>아이디: <%=id%></h1>
-    <h1>날짜: <%=date%></h1>
-    <h1>성별: <%=sex%></h1>
-    <h1>메일: <%=email%></h1>
-    <h1>동의여부:<%=agree%></h1>
-    <h1>폰번호:<%=phone%>-<%=phone1%>-<%phone2%></h1>
-    <h1>직업: <%=job%></h1>
-    <h1>취미: <%=hobby%></h1>
-    <h1>자기소개: <%=information%></h1>
-  
+
+    <h3 style="background-color: cornflowerblue;">회원 정보</h3>
+    <h3>아이디: <%=id%></h3>
+    <h3>날짜: <%=date%></h3>
+    <h3>성별: <%=sex%></h3>
+    <h3>메일: <%=email%></h3>
+    <h3>동의여부:<%=agree%></h3>
+    <h3>폰번호:<%=phone%> - <%=phone1%> - <%=phone2%></h3> 
+    <h3>직업: <%=job%></h3>
+    <h3>취미: <%=hobby%></h3>
+    <h3>자기소개: <%=information%></h3>
     
+
+  
 </body>
 </html>

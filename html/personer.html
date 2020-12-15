@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <form action="personer.jsp" method="POST">
+    
+    <form action="111111.jsp" method="POST">
     <h2>개인 정보 입력</h2>
     아 이 디: <input type="text" name="id" size="10" required>
     <button type="button" onclick="alert('ID중복검사 사용')">ID중복검사 사용</button></p>
@@ -24,9 +25,9 @@
         <option value="016">016</option> 
        - <input type="text" name="firstnumber"> - <input type="text" name="lastnumber"></select></p>
         직업: <select name="job">
-            <option value="학생" selected>학생</option>
-            <option value="직장인">직장인</option>
-            <option value="무직">무직</option>
+            <option value="학생" name=job selected>학생</option>
+            <option value="직장인" name=job>직장인</option>
+            <option value="무직" name=job>무직</option>
         </select></p>
         취미: <input type="radio" name="hobby" value="쇼핑">쇼핑
         <input type="radio" name="hobby" value="인터넷">인터넷
@@ -34,6 +35,7 @@
         <input type="radio" name="hobby" value="독서">독서
         <input type="radio" name="hobby" value="스포츠">스포츠</p>
         자기 소개: <textarea cols="50" rows="10" spellcheck="true" name="if"></textarea>
+        
 
     </p>
 
