@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/style.html</title>
+    <!-- <style>
+        .center{
+            text-align: center;
+            color:blueviolet;
+        }
+        h1 {
+            color: thistle;
+            font-size: 10px;
+            text-align: right;
+        }
+        /* header의 바로 자식이 h1 */
+        header > h1 {  
+            color: cornflowerblue;
+            font-size: 5px;
+            text-align: center;
+        }
+        /* header의 자손! 자식도 포함임 */
+        header h1 {
+            color: crimson;
+            font-size: 15px;
+        }
+        #first {
+            color: crimson;
+            font-size: 20px;
+
+        }
+        .first {
+            color: darkgoldenrod;
+            font-size: 100px;
+        }
+        header .first {
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>스타일지정</h1>
+    <h1 class='first'>스타일지정1</h1>
+    <div><h1 class='first'>스타일지정1-1</h1></div>
+</header>
+    <h1 class="center">HELLO STRANGER!</h1>
+    <p class="center">WELCOME HOME</p>
+   -->
+
+    <!--///////////////////////////////////////////////  -->
+    <head>
+        <style>
+            *{
+                color:red;
+                background-color: olive;
+                font-size: 13px;
+            }
+        </style>
+        <style>
+            h1 {
+                background-color: yellow;
+            }
+            h2 {background-color: green;}
+            h3 {background-color: hotpink;}
+            p {color: red;}
+        </style>
+        <style>
+            .class1 {color: blue; background-color:seagreen}
+            .class2 {color: red; background-color:green;}
+            h3.class1 {color: navy; background-color: pink;}
+            h3.class2 {color:silver; background-color:aqua;}
+        </style>
+    </head>
+</body>
+<h1 class="class1">Univasal Selector</h1>
+<h2 class="class1">모두 같은 색상, 같은크기</h2>
+<h3 class="class2">전체적 동시 스타일 지정</h3>
+<p class="class2">모든 데이터에 적용</p>
+</html>

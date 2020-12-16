@@ -62,17 +62,6 @@
               <td><%=hobby%></td>
               <td> <%=information%></td>
             </tr>
-            <tr>
-                <td><%=id%></td>
-                <td><%=date%></td>
-                <td><%=sex%></td>
-                <td><%=email%></td>
-                <td><%=agree%></td>
-                <td><%=phone%> - <%=phone1%> - <%=phone2%></td>
-                <td><%=job%></td>
-                <td><%=hobby%></td>
-                <td> <%=information%></td>
-              </tr>
          
           </tbody>
         </table>
