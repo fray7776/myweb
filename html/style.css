@@ -1,0 +1,18 @@
+
+            *{
+                color:red;
+                background-color: olive;
+                font-size: 13px;
+            }
+      
+            h1 {
+                background-color: yellow;
+            }
+            h2 {background-color: green;}
+            h3 {background-color: hotpink;}
+            p {color: red;}
+      
+            .class1 {color: blue; background-color:seagreen}
+            .class2 {color: red; background-color:green;}
+            h3.class1 {color: navy; background-color: pink;}
+            h3.class2 {color:silver; background-color:aqua;}

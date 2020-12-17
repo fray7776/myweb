@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/input.html</title>
+    <style>
+        type[type='p'] {color: tomato;}
+        [type^='p'] {
+            background-color:lavender;
+        }
+        [type='text'] {
+            color: violet;
+            background-color: thistle;
+        }
+        type[text="tomato"] {
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
     <form action="input.jsp" method="GET">
@@ -12,5 +26,7 @@
     <br>비밀번호 : <input type="password" name="user_pw" id="user_pw">
     <br><input type="submit" value="입력">
     <input type="reset" value="취소"></form>
+    <h2>Text Selection</h2>
+    <p text="hello">모든 텍스트</p>
 </body>
 </html>

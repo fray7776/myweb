@@ -4,71 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/js.html</title>
+    <style>
+        .title {
+            background-color:yellow;
+        }
+        .data {
+            background-color:darkcyan;
+        }
+
+    </style>
+    <script>
+        console.log("head영역");
+        
+    </script>
 </head>
 <body>
+    
     <div id="show"></div>
     <div id="Fruit"></div>
     <table id="tbl" border="1">
-        <tr>
-            <td>name</td>
-            <td>age</td>
+        <!-- <tr>
+            <td class='title'>name</td>
+            <td class='title'>age</td>
         </tr>
         <tr>
             <td>Song</td>
             <td>28</td>
-        </tr>
+        </tr> -->
     </table>
+    <script src="../js/table.js"></script>
     <script>
-        // var name= document.getElementById('show').innerHTML;
-        // console.log(name);
-        // document.getElementById('show').innerHTML = "World";
-
-        // var divTag=document.createElement("div"); //<div>Nice</div>
-        // divTag.innerHTML="Nice"
-
-        // document.getElementById('show').before(divTag);
-
-        var name= document.getElementById('Fruit').innerHTML;
-        // console.log(name);
-        document.getElementById('Fruit').innerHTML="Fruit";
-
-        // var divTag=document.createElement("div");
-        // divTag.innerHTML="Apple"
+        console.log("body영역");
+        document.getElementById('Fruit').innerHTML="great";
         
-
-        // var divTag1=document.createElement("div");
-        // divTag1.innerHTML="Orange"
-
-        // document.getElementById('Fruit').append(divTag,divTag1);
-
-        var expression=document.createElement("li")
-        var expression1=document.createElement("li")
-        expression.innerHTML="Apple";
-        expression1.innerHTML="Orange";
-
-        document.getElementById("Fruit").append(expression);
-        document.getElementById("Fruit").append(expression1);
-
-        //////////////////////////////////////////////
-        for(var i=1; i<=9; i++) {
-        var str='2*'+i+'='+2*i;
-        console.log(str);
-        }
-        ////////////////////////////////////////////
-        var sum=0;
-        for(var i=1; i<=100; i++) {
-            sum += i;
-            
-        }console.log(sum);
-        
-
-
-
-
-
-
-
-
     </script>
 </body>
 </html>
