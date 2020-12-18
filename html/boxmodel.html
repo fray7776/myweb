@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/boxmodel.html</title>
+    <style>
+        * {box-sizing: border-box;}
+
+  
+
+        
+        .container {
+            background-color: hotpink;
+            padding: 10px;
+            height: 300px;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            border-radius: .5em;
+            
+        }
+        .box {
+            background-color:ivory;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            position:sticky;
+            
+            
+        }
+        .box div{
+            text-align: center;
+            font-size: 1em;
+        }
+        .box ul{
+            text-align: center;
+            margin-block-start:0mm;
+        }
+    </style>
+</head>
+<body>
+    
+    <article class='container'>
+        
+   
+     <div class='box' style="text-align: center;">11</div>
+        <div class='box'>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+            <div class='box'></div>
+            <div class='box'></div>
+            <div class='box'></div>
+            <div class='box'></div>
+        </article>
+    
+
+</body>
+</html>

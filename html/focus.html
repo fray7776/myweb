@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -11,14 +13,32 @@
     input[type='text']:focus{background-color: red;}
     input:checked + div.d1 {background-color: gray;}
     input:checked + div.d2 {background-color: black;}
+
 </style>
 </head>
 <body>
+    <script>
+        function answer() 
+        {var a="paris";
+        if(a==(document.getElementById("answer").value)){
+            alert("축하축하 정답입니다~");
+        }else{alert("에헤이~ 틀렸습니다");
+        }
+        }
+        
+  
+    </script>
+    <!-- <form action="pocus.jsp" method="get"> -->
   <h2>States pseudo-clasee</h2>
   <h3>문제> 프랑스의 수도는?</h3>
-  <p>정답작성: <input type="text" name="answer"></p><br>
+  <form name=aform>
+  <p>정답작성: <input type="text" name="answer" id="answer"></p><br>
   <input type="submit" value="입력">
-  <input type="reset" value="초기화">
+  <input type="reset" value="초기화"></form>
+  
+<!-- </form> -->
+
+  
 
   <h2>answer</h2>
   힌트보기: <input type="checkbox">
@@ -26,11 +46,12 @@
       에펠탑이 있는곳
   </div>
   정답보기: <input type="checkbox">
-  <div class="d2">
+  <div class="d2" value="answer">
       paris
   </div>
+  
 
-
+</form>
 </body>
 
 </html>

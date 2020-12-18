@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<script>
+ function checkval()
+ {var val ="1번문제의 정답";
+ if(val == (document.getElementById("출력1").value))
+
+  {var val ="2번문제의 정답";
+  if(val == (document.getElementById("출력2").value))
+
+   {var val ="3번문제의 정답";
+   if(val == (document.getElementById("출력3").value))
+
+    {alert("모두다 정답입니다.");
+    window.open('http://www.gyool.net');
+    }
+    else{
+    alert("3번이 오답입니다.");
+    }
+   }else{
+   alert("2,3번 중 오답이 있습니다.");
+   }
+  }else{
+  alert("1,2,3번중 오답이 있습니다.");
+  }
+ }
+
+</script>
+</head>
+
+<body>
+ <form name="aform">
+  <input type="text" name="result" size=15 id="출력1"/><br />
+  <input type="text" name="result2" size=15 id="출력2"/><br />
+  <input type="text" name="result3" size=15 id="출력3"/><br />
+  <input type="button" id="btn" value="check" style= width:50 height=30 onclick="checkval()">
+ </form>
+</body>
+
+</html>

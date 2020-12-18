@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,16 +10,28 @@
         td {
             background-color: darkgrey;
             color: floralwhite;
+            border: 3px solid black;
+            
+        }
+        td[name="title"] {
+           background-color:gray;
+           
+        }
+        h3 {
+            color:darkslateblue
         }
     </style>
+   
     
 </head>
 <body>
+    <h3>&nbsp;**Company INFO
+    <i class="fas fa-cloud"></i></h3>
     <table >
         <tr>
-           <td>Company</td> 
-           <td>Contact</td>
-           <td>Contry</td>
+           <td name="title">Company</td> 
+           <td name="title">Contact</td>
+           <td name="title">Contry</td>
         </tr>
         <td style="background-color: darkgrey;">Alfreds Futterkiste</td>
         <td>Maria Anders</td>
