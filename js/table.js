@@ -50,4 +50,4 @@ trTag2.append(tdTag4)
 console.log(trTag1)
 
 tableTag.append(trTag1)
-tableTag.append(trTag2)
+tableTag.append(trTag2) 
