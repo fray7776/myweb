@@ -44,10 +44,10 @@ for(let i=0; i<nameAry.length; i++) {
 
 //테이블
  document.write('<table border="1">');
- document.write('<tr><th>'+'순번'+'</th>'+'<th>'+'이름'+'</th></tr>')
+ document.write('<tr><th>순번</th><th>이름</th></tr>')
  let i=1;
  for(str of nameAry) {
-    // document.write('<tr><td>'+(i++)+'</td>');
-    // document.write('<td>'+str+'</td></tr>');
+    document.write('<tr><td>'+(i++)+'</td>');
+    document.write('<td>'+str+'</td></tr>');
  }
   document.write('</table>');
