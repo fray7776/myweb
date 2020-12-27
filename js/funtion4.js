@@ -6,25 +6,38 @@ function input_friend() {
   let namea = document.getElementById('name').value;  
   let agea = document.getElementById('age').value;
   let hobbya = document.getElementById('hobby').value;
+  let aTr=document.createElement('tr');
 
   let friend = {};
   friend.name = namea;
   friend.age = agea;
   friend.hobby = hobbya;
-  
-  
-  friends[i++] = friend;
-  console.clear();
 
-  let new1=document.getElementById('friends');
+ 
+  document.getElementById(aTr);
+  let aTd=document.createElement('td');
+  aTd.innerHTML=namea;
+  let aTd2=document.createElement('td');
+  aTd2.innerHTML=agea;
+  let aTd3=document.createElement('td');
+  aTd3.innerHTML=hobbya;
+ 
 
-  for(a of friends) {
-    document.write('<tr>')
-      for(field in a) {
-          document.getElementById('friends').innerHTML = namea.value
-          console.log(friend[a]);
-      }
-  }
+  aTr.append(aTd);
+  aTr.append(aTd2);
+  aTr.append(aTd3);
+  
+  let m =document.getElementById('friends').append(aTr);
+console.log(m);
+  // for(a of friends) {
+  //   document.write('<tr>')
+  //     for(field in a) {
+  //         document.write('<td>'+a[field]+'</td>')
+
+  //         document.write('</tr>')
+        
+  //     }document.write('</table>')
+  // }
 //   console.log(name.value,age.value,hobby.value);
 
 //   document.getElementById('show').innerHTML = name.value+','+age.value+','+hobby.value;
