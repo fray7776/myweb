@@ -13,10 +13,14 @@ ulTag.append(liTag1);
 document.getElementById('show').append(ulTag);
 console.log(ulTag);
 
-// function input_friend() {
-//   let fruit=document.getElementById('a').value;
-//   let liTag2=document.createElement('li');
-//   liTag2.innerHTML = fruit;
+function input_friend() {
+  let fruits=document.getElementById('a').value;
+  fruit.append(fruits)
+  let liTag2=document.createElement('li');
+  liTag2.innerHTML = fruit;
+  ulTag.append(liTag2);
+
+
 
 //   document.getElementById('a').append(liTag2);
-// }
+}
