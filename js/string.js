@@ -33,3 +33,5 @@ for(f of fruits) {
     console.log(f.trim()); //trim은 공란 없애기
 }
 
+
+
