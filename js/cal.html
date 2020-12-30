@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal.html</title>
+</head>
+
+<body>
+    <div id="show"></div>
+    <script>
+        let h3=document.createElement('h3');
+        h3.innerHTML='<2020년 12월>';
+        show.append(h3);
+
+       
+        function createHeader(a,b,c) {
+            let td = document.createElement('td');
+            td.append(a);
+            tr.append(td);
+            t.append(tr);
+            
+            
+            // let z= ' ';
+            // z=z.padStart(2,' ');
+            // document.getElementById(td).innerHTML=z;
+            // td.append(z);
+
+        }
+        
+        
+        function createData(a,b,c) {
+            
+            if(a%7==6){
+                tr=document.createElement('tr');
+            }
+            
+
+            console.log(a);
+            let td = document.createElement('td');
+            td.append(a);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+            
+            
+
+            
+            tr.append(td);
+            t.append(tr);
+            td.setAttribute('style','text-align:center');
+
+        }
+
+
+        let s = document.getElementById('show');
+        // let s1 = document.createElement('h1');
+        // s1.innerHTML = 'HELLO';
+        // show.append(s1);
+
+
+        let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Tur', 'Fri', 'Sat'];
+        let dates = [];
+        
+        let t = document.createElement('table');
+        t.setAttribute('border', '1');
+        let tr = document.createElement('tr');
+
+        
+        days.forEach(createHeader);
+        
+        for (let i = 1; i <= 31; i++) {
+            dates.push(i);
+        }
+
+        dates.unshift(' ');
+        dates.unshift(' ');
+
+        tr=document.createElement('tr');
+        
+        
+        dates.forEach(createData)
+        
+        show.append(t);
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- let tr1 = document.createElement('tr');
+for (let i = 1; i <= 31; i++) {
+    let td = document.createElement('td');
+    td.setAttribute('style','text-align:center;width:30px');
+    td.innerHTML = i;
+    tr1.append(td);
+    if (i % 7 == 0) {
+        tr1 = document.createElement('tr');
+    }
+    t.append(tr1);
+    if (i % 7 == 0) {
+        td.setAttribute('style', 'background-color:blue;text-align:center');
+    }
+    if(i % 7 == 1) {
+        td.setAttribute('style','background-color:red;text-align:center')
+    }
+
+
+}
+show.append(t); -->

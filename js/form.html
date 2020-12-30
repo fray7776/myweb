@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.html</title>
+</head>
+
+<body>
+    <div id="show"></div>
+    <script>
+        let t = document.createElement('table');
+        t.setAttribute('border', '1');
+
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+
+        let label = document.createElement('label');
+        label.setAttribute('for', 'id');
+        label.innerHTML = 'ID';
+
+        let input = document.createElement('input');
+        input.setAttribute('type', 'checkbox');
+        label.append(input);
+        td.append(label);
+        tr.append(td);
+
+        td = document.createElement('td');
+        td.innerHTML = '홍길동';
+        tr.append(td);
+
+        td = document.createElement('td');
+        td.innerHTML = '20세';
+        tr.append(td);
+
+        td = document.createElement('td');
+        td.innerHTML = '독서';
+        tr.append(td);
+
+        let button = document.createElement('button');
+        td = document.createElement('td');
+        button.innerHTML = 'OK';
+        td.append(button);
+        tr.append(td);
+
+        t.append(tr);
+        show.append(t);
+
+
+
+        let members = [];
+
+        for (let i = 1; i <= 3; i++) {
+            let member = {};
+            member.name = '송혜원' + i;
+            member.age = 25 + i + '세';
+            member.hobby = '독서' + i;
+            members.push(member);
+        }
+
+        members.forEach(function (z, x, c) {
+            tr = document.createElement('tr');
+            td = document.createElement('td');
+
+            label = document.createElement('label');
+            label.setAttribute('for', 'id');
+            label.innerHTML = 'ID';
+            td.append(label);
+            tr.append(td);
+            let input = document.createElement('input');
+            input.setAttribute('type', 'checkbox');
+            label.append(input);
+            td.append(label);
+
+            for (field in z) {
+
+                td = document.createElement('td');
+                td.append(z[field]);
+                tr.append(td);
+
+
+                t.append(tr);
+
+            }
+            td = document.createElement('td');
+            let button = document.createElement('button');
+            button.setAttribute('type', 'checkbox');
+            button.innerHTML = 'OK';
+            td.append(button);
+            tr.append(td);
+
+        });
+
+
+        show.append(t);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
