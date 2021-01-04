@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean.html</title>
+</head>
+<body>
+    <script>
+        let trueOrFalse = new Boolean(10+9==1);//new라고 쓰지 말고 수식으로 적는걸 권장한다.
+        trueOrFalse=1; //값이 변수에 할당되있으면 true이고 '0,null,undefined,'' '이면 false를 반환한다.
+        if(trueOrFalse) {
+            console.log('그래 맞다');
+        }else{
+        console.log('틀렸다');
+        }
+
+        let val1=100; //자바스크립트는 값이 들어오면 변수타입이 지정되기 때문에 == 두번쓰면 숫자로 인식
+        let val2='100';
+        if(val1!==val2){ //===, !==세번쓰면 값, 타입도 비교 if(!(val1==val2)) --->val1==val2가 아니면이라는 부정의의미.
+            console.log('그래 맞다');
+        }else{
+        console.log('틀렸다');
+        }
+        result='hello';
+        console.log(result);
+
+        result= {
+            name:'Song',
+            age:20,
+            getName: function() {
+                return this.name+this.age;
+            },
+            getInfo: function() {
+                return this.name+'-'+this.age;
+            }, get getAge() {
+                return this.age;
+            },
+            set setAge(age) {
+                this.age=age;
+            }
+        
+        }
+        // result.hobby='reading';
+        console.log(result.getAge());
+        result.name;
+
+        delete result.hobby;
+        //배열일 경우 for of..
+        //object일 경우 for in..
+        let person={
+            name:'Song',
+            age:11,
+            address:'Sanfransisco'
+        }
+        
+        let persons = [person];
+
+        let person1 ={
+            name:'Kang',
+            age:30,
+            address:'Sweden'
+        }
+        persons.push(person1);
+        let vals=Object.values(person); //필드의 값만 가져오고 싶을때 Object.values, 배열로 담긴다.
+        console.log(vals);
+        vals=JSON.stringify(person); //JSON.stringify는 문자열로 담긴다.(number타입빼고)
+        console.log(vals);
+
+        for(person of persons) {
+            for(field in person) {
+                console.log(field,'-',person[field])
+
+            }
+        }
+
+        let v=result;
+        result.age=11; //v,result가 같이 연동된다. 하나의 내용을 바꾸면 나머지 하나도 같이 바뀜
+                       //object를 참조하고 있으면 실제 값이 들어가기 때문에 바뀐다.
+
+        // console.log(v.name+','+v.age);
+        // console.log(result);
+
+        result='hello'; //object가 아니라 값을 담지 못한다.
+        v=result;
+        result='world';
+        v=result;
+        // console.log(v);
+
+    </script>
+</body>
+</html>

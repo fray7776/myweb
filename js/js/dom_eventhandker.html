@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_eventhandler.html</title>
+</head>
+<body>
+    <button id='btn'>CLICK</button>
+    <script>
+        let btn = document.getElementById('btn');
+        //''따옴표 안에 실제 이벤트를 적으면된다.
+        btn.addEventListener('click',function(){
+            window.alert('click');
+        });
+        btn.addEventListener('mouseover',function(){
+            btn.style.backgroundColor='green';
+        });
+        btn.addEventListener('mouseout',function(){
+            btn.style.backgroundColor='';
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>DOM Tutorial</title>
+</head>
+<body>
+    <h1>DOM Lesson one</h1> 
+    <p>Hellow world!</p>
+    <div id="show"></div>
+    <script>
+        let ul=document.createElement('ul');
+        let li=document.createElement('li');
+        let text=document.createTextNode('one');
+        li.append(text);
+        ul.append(li);
+        show.append(ul)
+
+        let li1=document.createElement('li');
+        let text1=document.createTextNode('two') //node로 text만들때 createTextNode 사용!
+        li1.append(text1);
+        ul.append(li1);
+        show.append(ul)
+
+
+        let bdy = document.getElementsByTagName('body');
+        console.log(bdy[0].childNodes[1].childNodes[0]);
+        
+        let p=document.getElementsByTagName('p');
+        console.log(p[0].previousSibling.nodeValue='SAY YES');  
+        </script>
+</body>
+</html>
+
+<!-- h1앞에 공간이 있기때문에 text node가 있는것임, node는 text도 다 포함이기 때문에 주의해야함
+parentNode는 하나밖에 없기때문에 배열 쓸필요 xx -->

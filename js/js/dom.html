@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.html</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            background-color: cornflowerblue;
+            position:relative;
+        }
+        #animate {
+            width:50px;
+            height:50px;
+            background-color:deepskyblue;
+            position:absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button id='btn'>Move start!!!</button>
+   <div id="container">
+       <div id="animate"></div>
+   </div>
+   <script>
+       setInterval(() => {
+           document.getElementById('animate').innerHTML='HELLO';
+       }, 1000);
+
+
+       let btn = document.getElementById('btn');
+       btn.onclick = moveStart; // movestart() 괄호를 써주면 start누르기 전에 이미 start되버리기때문에 써주지 않는다.
+       function moveStart() {
+          console.log('start');
+          let animate = document.getElementById('animate');
+          let i=0;
+        let myInterval = setInterval(() => {
+             i++;
+                  animate.style.left = i+'px';
+                  animate.style.top = i+'px';
+                  if(i==350)
+                  clearInterval(myInterval);
+              },10); //단위가 밀리세컨드라서 10이면 0.01초임
+       }
+   </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- //구구단을 생성
+//function makeMulti(val);
+//모양은 테이블 형식
+function makeMulti(val) {
+    let t = document.createElement('table');
+    t.setAttribute('border', '1');
+
+
+    for (let i = 1; i <= 9; i++) {
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+        td.innerHTML = val;
+        tr.append(td);
+        let td1 = document.createElement('td');
+        td1.innerHTML = '*';
+        tr.append(td1);
+
+        let td3 = document.createElement('td');
+        td3.innerHTML =i;
+        tr.append(td3);
+
+        let td4 = document.createElement('td');
+        td4.innerHTML ='=';
+        tr.append(td4);
+
+
+        let td2 = document.createElement('td');
+        td2.append(val * i);
+        tr.append(td2);
+        t.append(tr);
+
+    }
+    show.append(t);
+}
+let result = makeMulti(1);
+console.log(result); -->

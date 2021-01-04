@@ -20,7 +20,7 @@ something = {
 // }
 
 //field와 값을 하나씩 가져옴 something.field를 하면 something이라는 필드의 필드 값을 가져오겠다는 뜻이라 쓰면안됨
-let name = something.name;
+let name = something.name;+
 let age = something['age'];
 
 for (field in something) {

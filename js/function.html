@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function.html</title>
+</head>
+
+<body>
+    <div id="show"></div>
+    <script>
+        function sum(a, b) {
+            return a + b;
+        }
+        let result = sum(10, 2);
+        function showElement() {
+            let h1 = document.createElement('h1');
+            h1.innerHTML = 'SAY YES';
+            return h1;
+        }
+        result = showElement();
+
+        function Person(name, age, hobby) {
+            this.name = name;
+            this.age = age;
+            this.hobby = hobby;
+        }
+        let persons = [];
+        Person.prototype.phone = '010';
+        //toString(메소드추가)
+        // Person.prototype.toString = function () { 
+        //     return this.name + '-' + this.age + '-' + this.hobby + '-' + this.phone;
+        // }
+        let p1 = new Person('Park', 20, 'sleep');
+
+        let p2 = new Person('Jang', 30, 'reading')
+        persons.push(p1);
+        persons.push(p2);
+        persons.push(new Person('Kim', 25, 'game'));
+
+        function createTable(ary) {
+            //persons=>배열
+            //이름, 나이,취미,연락처 보여지는 테이블 만들기
+            let table = document.createElement('table');
+            table.setAttribute('border', '1');
+
+            let tr = document.createElement('tr');
+            for(a of persons) {
+                td = document.createElement('td');
+                td.append(a)
+                tr.append(td);
+                table.append(tr);
+        
+            }   
+            persons.forEach(function (a, b, c){
+                for (let i = 0; i < ary.length; i++) {
+                tr = document.createElement('tr');
+                for (persons in a) {
+                    td = document.createElement('td');
+                    td.append(a[persons]);
+                    tr.append(td);
+                    table.append(tr);
+
+                }
+            }
+            
+        })
+        show.append(table);
+            
+
+        }
+
+        // return table;
+        // }
+        result = createTable(persons);
+        // document.getElementById('show').append(result);
+
+        let x = (a, b) => {
+            return a + b;
+        }
+        let y = x;
+
+        console.log(y(1, 5));
+        console.log(x(1, 5));
+
+        function findMax() {  //arguments object는 findmax를 매개값으로 받아 배열로 만들어줌, 매개값을 정의할 필요x
+            console.log(arguments);
+            let max = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+
+            }
+            return max;
+        };
+        result = findMax(1, 5, 2, 3, 4, 7, 9);
+        console.log(result);
+        document.getElementById('show').append(result);
+
+    </script>
+</body>
+
+</html>
