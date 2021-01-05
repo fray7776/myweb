@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax.html</title>
+</head>
+
+<body>
+    <div id="show"></div>
+    <script>
+        let xhtp = new XMLHttpRequest(); //서버에 있는거를 불러오는?? object
+        //onload는 다 읽어와서 function을 실행한다. (한번만실행)
+        //onreadystatechange는 상태가 바껴지면서 계속실행해줌
+        xhtp.onreadystatechange = function () {
+            // console.log(xhtp.readyState,xhtp.status);
+            if (xhtp.readyState == 4 && xhtp.status == 200) {
+                console.log(xhtp.responseXML);
+                let doc = xhtp.responseXML;
+                let result = doc.querySelectorAll('dataset> record');
+                // let ulTag= document.createElement('ul');
+                let t = document.createElement('table');
+                t.setAttribute('border', '1');
+                for(let j=0; j<result.length;j++) {
+                    let th=document.createElement('th')
+                    let tr = document.createElement('tr');
+                    let str1=result[j].childNodes[0].childNodes[0].nodeValue
+                    let textNode1 = document.createTextNode(str1);
+                    th.appendChild(textNode1);
+                    tr.appendChild(th);
+                
+                for (let i = 0; i < result[j].childNodes.length; i++) {
+                    let td = document.createElement('td');
+                    let str = result[j].childNodes[i].childNodes[0].nodeValue
+                    let textNode = document.createTextNode(str);
+                    // textNode.appendChild(str);
+                    td.appendChild(textNode);
+                    tr.appendChild(td);
+                    
+                }
+                t.append(tr);
+            }
+            show.appendChild(t);
+        }
+    }
+        xhtp.open('get', 'dataset.xml'); //요청방식, 요청할 파일지정(txt로 요청)
+        xhtp.send(); //send를 해야 요청이 보내짐
+    </script>
+</body>
+
+</html>
